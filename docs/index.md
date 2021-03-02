@@ -41,8 +41,8 @@ print("The speed is", str(speed),  "miles/hr")
 ```
 In my script distance of the race = 100 miles. The program asks the user to enter time spent to finish the race in hours and then calculates the speed (speed =distance/time). And displays the result.
 I identified 2 errors that could cause the error and the end of the program:
-1.	Division by zero (if the user enters 0 for time)
-2.	Unconvertible String to integer conversion (if the user enters types in “two” instead of “2” for time, it’s impossible to convert “two” to integer or float to perform calculations).
+1. Division by zero (if the user enters 0 for time)
+2. Unconvertible String to integer conversion (if the user enters types in “two” instead of “2” for time, it’s impossible to convert “two” to integer or float to perform calculations).
 To handle these errors I applied try statement with an except clause. Here’s the one to handle the Structured Error Demonstration Script:
 ```
 try:
