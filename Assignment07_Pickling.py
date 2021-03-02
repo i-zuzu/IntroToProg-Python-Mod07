@@ -17,7 +17,7 @@ objFile = "BirthdayWishlist.dat"   # An object that represents a file
 lstWishitem = []
 strYorN = "" # Captures the user option selection to exit or continue
 
-print("\n Your birthday is coming soon and you need to manage your wishlist.")
+print("\n Your birthday is coming up and you need to manage your wishlist.")
 
 while(True):
     print("""
