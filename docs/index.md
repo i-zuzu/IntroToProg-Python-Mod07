@@ -58,6 +58,7 @@ Since I specified the name of the error after try statement, this exception is o
 If the call to calculate speed raises an exception (as a result of the user entering 0 for time), the exception is caught and the user is informed that You didn't race. If no exception is raised, time string entered by the user converts to number and the program skips the except clause, continuing with the rest of the code.
 
 ![image](https://user-images.githubusercontent.com/79129459/109626686-b0664280-7af5-11eb-9bfc-5a471fb8bad0.png)
+
 *Figure1. Code output when ZeroDivision Exception raised.*
 Python allows to catch multiple exceptions with multiple except clauses. You can list as many except clauses as you like. So I added another one to catch the Value Error (in case the user enters unconvertible to integer string):
 ```
@@ -123,6 +124,7 @@ while True:
 ```
 The next Figure shows the code running in PyCharm:
 ![image](https://user-images.githubusercontent.com/79129459/109628036-228b5700-7af7-11eb-8008-14eb35c96847.png)
+
 *Figure5. Output of Structured Error Demo script in PyCharm*
 
 
