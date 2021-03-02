@@ -59,5 +59,7 @@ If the call to calculate speed raises an exception (as a result of the user ente
 
 ![https://github.com/i-zuzu/IntroToProg-Python-Mod07/blob/main/docs/Pic1.png ](https://github.com/i-zuzu/IntroToProg-Python-Mod07/blob/main/docs/Pic1.png "Figure1. Code output when ZeroDivision Exception raised.")
 
+![image](https://user-images.githubusercontent.com/79129459/109626686-b0664280-7af5-11eb-9bfc-5a471fb8bad0.png)
+
 
 
