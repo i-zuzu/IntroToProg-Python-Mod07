@@ -43,6 +43,7 @@ In my script distance of the race = 100 miles. The program asks the user to ente
 I identified 2 errors that could cause the error and the end of the program:
 1. Division by zero (if the user enters 0 for time)
 2. Unconvertible String to integer conversion (if the user enters types in “two” instead of “2” for time, it’s impossible to convert “two” to integer or float to perform calculations).
+
 To handle these errors I applied try statement with an except clause. Here’s the one to handle the Structured Error Demonstration Script:
 ```
 try:
@@ -56,7 +57,7 @@ By using a try statement, I sectioned off the code that could potentially raise 
 Since I specified the name of the error after try statement, this exception is only going to raise if the user enters ‘0’ for time. 
 If the call to calculate speed raises an exception (as a result of the user entering 0 for time), the exception is caught and the user is informed that You didn't race. If no exception is raised, time string entered by the user converts to number and the program skips the except clause, continuing with the rest of the code.
 
-![Figure](https://github.com/i-zuzu/IntroToProg-Python-Mod07/blob/main/docs/Pic1.png)
-Figure1. Code output when ZeroDivision Exception raised. 
+![https://github.com/i-zuzu/IntroToProg-Python-Mod07/blob/main/docs/Pic1.png ](https://github.com/i-zuzu/IntroToProg-Python-Mod07/blob/main/docs/Pic1.png "Figure1. Code output when ZeroDivision Exception raised.")
+
 
 
