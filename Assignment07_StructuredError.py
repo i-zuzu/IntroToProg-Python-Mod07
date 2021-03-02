@@ -16,7 +16,7 @@ strInput = ""  # time to finish the race
 print("You completed 100 miles race.")
 while True:
     try:
-        strInput = input("\n Please enter your time in hours: ")
+        strInput = input("\n Please enter your time in hours or 'exit' to stop: ")
         if strInput == 'exit':
             break
         time = float(strInput)
