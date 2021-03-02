@@ -265,9 +265,12 @@ while(True):
         print(strChoice, "is not in the Menu of Options.")
 ```
  The next picture shows pickling file running in Terminal and the binary file created.
- 
- *Figure8. Pickling demo script running in Terminal and binary file
-```
+ ![image](https://user-images.githubusercontent.com/79129459/109699479-7c1a7280-7b45-11eb-8a30-0f779e376091.png)
+
+ *Figure3. Pickling demo script running in Terminal and binary file
+
+## Summary
+In this assignment I practiced in creating and developing my own code. I learned and practiced how to save data to files through pickling and how to manage a pickled objects in a binary file. I got the knowledge on how to handle exceptions raised during the execution of a program and how to trap for specific exceptions and how to write code to deal with them. 
 
 
 
