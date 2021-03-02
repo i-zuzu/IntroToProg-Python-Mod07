@@ -132,7 +132,145 @@ The next Figure shows the code running in PyCharm:
 ## **Pickling Demonstration Script**
 This script demonstrates how to pickle, unpickle and rewrite pickled data. It also has the example of another option to handle multiple exception times by listing the in a single except clause. The script will allow the user to create a Birthday wihslist [], add some items to this list and then perform pickle features. 
 My script will be pickling list [], but Python allows to pickle di
-I import pickle module at the beginning: 
+I import pickle module at the beginning. Then the script offers the user Menu of choice to choose the pickling feature to test and manage the wishlist:
+```
+import pickle
+while(True):
+    print("""
+    Menu of Options
+    1) Show current wishlist (pickled data)
+    2) Add new data to your wishlist (pickled list)
+    3) Rewrite wishlist (current pickled data will be deleted)
+    4) Exit Program
+    """)
+    strChoice = str(input("Which option would you like to perform? [1 to 4] - "))
+```
+
+If the user chooses option 1 then the program opens binary "BirthdayWishList.dat" file and unpickles the data using function the load() function. Then it displays the content of the file to the user. I also called the exception to handle 2 types of error: FileNotFoundError (if program can’t find the file, it doesn’t exist) and EOFError (there’s no data in the file). These 2 errors are listed in a single except clause as a comma-separated group enclosed in a set of parentheses. If the program gets to one of these errors the message "You haven't pickled your Wishlist data yet." Will be displayed to the user.
+Below is a piece of code to execute option 1:
+```
+if strChoice == '1':
+    try:
+        objFile = open("BirthdayWishList.dat", "rb")
+        lstWishitem = pickle.load(objFile)
+        print("Here's your current wishlist (unpickled): ")
+        print(lstWishitem)
+        objFile.close()
+    except (FileNotFoundError, EOFError):  # exception in case the file with pickled data doesn't exist
+        print("You haven't pickled your Wishlist data yet.")
+        continue
+```
+
+Now let’s look at option 2 that allows user to add data to pickled list. First I open the binary file and load the data. Then I get the input from the user and add it to lstWishitem list [].  And the program adds this list to a binary file (pickles it) using dump() function. And I also added try – except statement to handle the exceptions.
+Below is a piece of code to execute option 2:
+```
+elif strChoice == '2':
+    strItem = input("Enter the wish item you want to add to your wishlist: ")
+    try:
+        objFile = open("BirthdayWishList.dat", "rb")
+        lstWishitem = pickle.load(objFile)
+        objFile.close()
+    except ((FileNotFoundError, EOFError)): # exception in case there were no pickled data
+        lstWishitem = []
+        print("I created a list to add your desired gifts to it.")
+    lstWishitem.append(strItem)
+    objFile = open("BirthdayWishList.dat", "wb")
+    pickle.dump(lstWishitem, objFile)
+    objFile.close()
+```
+Now about Option 3 that allows to rewrite pickled data. 
+If the user chooses Option 3, then the new binary file opened in write binary mode (“wb”).If the file exists, its content will be overwritten, if the file doesn’t exist it will be created. And the user can add data to the file using option 2 from the menu. Below is the piece of code for option 3:
+```
+elif strChoice == '3':
+    objFile = open("BirthdayWishList.dat", "wb")
+    objFile.close()
+    print("You can start adding items to a new list. If you had the data in the file before, it is deleted. ")
+```
+Below is my Pickle Demonstration Script:
+```
+# ------------------------------------------------------------------------ #
+# Title: Assignment 07
+# Description: This script demonstrates how Pickling works.
+#              It allows you to create a list that contains gifts you'd like to receive
+#              You can also pickle,unpickle and rewrite pickled data in your Birthday Wishlist.
+#
+# ChangeLog (Who,When,What):
+# Irina Zubova,2-28-2020, Created the script
+# ------------------------------------------------------------------------ #
+
+import pickle
+
+# -- Data -- #
+# declare variables and constants
+strChoice = "" # Captures the user option selection for menu options
+objFile = "BirthdayWishlist.dat"   # An object that represents a file
+lstWishitem = []
+strYorN = "" # Captures the user option selection to exit or continue
+
+print("\n Your birthday is coming up and you need to manage your wishlist.")
+
+while(True):
+    print("""
+    Menu of Options
+    1) Show current wishlist (pickled data)
+    2) Add new data to your wishlist (pickled list)
+    3) Rewrite wishlist (current pickled data will be deleted)
+    4) Exit Program
+    """)
+    strChoice = str(input("Which option would you like to perform? [1 to 4] - "))
+    print()  # adding a new line for looks
+
+# -- Input/Output and Processing -- #
+    # 1.Unpickle and display data
+    if strChoice == '1':
+        try:
+            objFile = open("BirthdayWishList.dat", "rb")
+            lstWishitem = pickle.load(objFile)
+            print("Here's your current wishlist (unpickled): ")
+            print(lstWishitem)
+            objFile.close()
+        except (FileNotFoundError, EOFError):  # exception in case the file with pickled data doesn't exist
+            print("You haven't pickled your Wishlist data yet.")
+            continue
+
+    # 2. Pickle the data
+    elif strChoice == '2':
+        strItem = input("Enter the wish item you want to add to your wishlist: ")
+        try:
+            objFile = open("BirthdayWishList.dat", "rb")
+            lstWishitem = pickle.load(objFile)
+            objFile.close()
+        except ((FileNotFoundError, EOFError)): # exception in case there were no pickled data
+            lstWishitem = []
+            print("I created a list to add your desired gifts to it.")
+        lstWishitem.append(strItem)
+        objFile = open("BirthdayWishList.dat", "wb")
+        pickle.dump(lstWishitem, objFile)
+        objFile.close()
+
+        print ("Item added")
+
+    # 3. Rewrite Pickled data
+    elif strChoice == '3':
+        objFile = open("BirthdayWishList.dat", "wb")
+        objFile.close()
+        print("You can start adding items to a new list. If you had the data in the file before, it is deleted. ")
+
+    # 4. Exit the Program
+    elif strChoice == '4':
+        strYorN = input("Are you sure you want to exit? [Y or N] ").upper()
+        if strYorN == "Y":
+            break  # and Exit the program
+    else:
+        print(strChoice, "is not in the Menu of Options.")
+```
+ The next picture shows pickling file running in Terminal and the binary file created.
+ 
+ *Figure8. Pickling demo script running in Terminal and binary file
+```
+
+
+
 
 
 
