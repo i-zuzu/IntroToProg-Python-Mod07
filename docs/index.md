@@ -60,6 +60,7 @@ If the call to calculate speed raises an exception (as a result of the user ente
 ![image](https://user-images.githubusercontent.com/79129459/109626686-b0664280-7af5-11eb-9bfc-5a471fb8bad0.png)
 
 *Figure1. Code output when ZeroDivision Exception raised.*
+
 Python allows to catch multiple exceptions with multiple except clauses. You can list as many except clauses as you like. So I added another one to catch the Value Error (in case the user enters unconvertible to integer string):
 ```
 try:
@@ -125,10 +126,13 @@ while True:
 The next Figure shows the code running in PyCharm:
 ![image](https://user-images.githubusercontent.com/79129459/109628036-228b5700-7af7-11eb-8008-14eb35c96847.png)
 
-*Figure5. Output of Structured Error Demo script in PyCharm*
+*Figure2. Output of Structured Error Demo script in PyCharm*
 
 
-
+## **Pickling Demonstration Script**
+This script demonstrates how to pickle, unpickle and rewrite pickled data. It also has the example of another option to handle multiple exception times by listing the in a single except clause. The script will allow the user to create a Birthday wihslist [], add some items to this list and then perform pickle features. 
+My script will be pickling list [], but Python allows to pickle di
+I import pickle module at the beginning: 
 
 
 
