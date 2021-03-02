@@ -122,6 +122,8 @@ while True:
         print("The speed is", str(speed),  "miles/hr")
 ```
 The next Figure shows the code running in PyCharm:
+![image](https://user-images.githubusercontent.com/79129459/109628036-228b5700-7af7-11eb-8008-14eb35c96847.png)
+*Figure5. Output of Structured Error Demo script in PyCharm*
 
 
 
