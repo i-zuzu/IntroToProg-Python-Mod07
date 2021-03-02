@@ -16,7 +16,7 @@ This page describes how I worked on Assignment07. It has some links from the web
 ## **Web Research on Exception Handling and Python**
 
 For Exception handling I found the following webpages really helpful:
-- (https://www.w3schools.com/python/python_try_except.asp) (external site)
+- [https://www.w3schools.com/python/python_try_except.asp] (external site)
 - (https://www.freecodecamp.org/news/exception-handling-python/) (external site)
 - (https://www.tutorialspoint.com/python/python_exceptions.htm) (external site)
 
