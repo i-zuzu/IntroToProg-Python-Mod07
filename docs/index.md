@@ -1,6 +1,6 @@
-# Title
+### **Irina Zubova**
 
-*IZubova, 3/1/2021*
+### **March 1, 2021**
 
-## Introduction
+## **Foundations of Programming: Python**
 Created for Assignment 07
